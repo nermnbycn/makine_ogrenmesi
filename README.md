@@ -8,9 +8,9 @@ Bu proje, kafe satış verilerini kullanarak müşterinin ödeme yöntemini tahm
 
 ERROR, UNKNOWN ve boş değerler NaN ile değiştirildi.
 
-Eksik Quantity değerleri silindi:
+Quantity gibi özelliklerin nan değerlerine olasılık miktarına göre değer atandı.
 
-data = data.dropna(subset=['Quantity'])
+Diğer sütunlardaki veriler aynı şekilde dolduruldu.
 
 Kategorik değişkenler OneHotEncoder ile dönüştürüldü.
 
