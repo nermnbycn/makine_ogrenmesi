@@ -6,12 +6,12 @@ Bu proje, kafe satış verilerini kullanarak müşterinin ödeme yöntemini tahm
 
 # Veri Temizleme
 
-## Bütün sütunlardaki ERROR, UNKNOWN ve boş değerler NaN ile değiştirildi.
+##### Bütün sütunlardaki ERROR, UNKNOWN ve boş değerler NaN ile değiştirildi.
 
-## Quantity, PricePerUnit, TotalSpent özellikleri string değerden numeric değere çevrildi.(Bu bir itemin fiyatından adetine göre ne kadar kazandığımızı belirlemeye katkı sağlar)
+##### Quantity, PricePerUnit, TotalSpent özellikleri string değerden numeric değere çevrildi.(Bu bir itemin fiyatından adetine göre ne kadar kazandığımızı belirlemeye katkı sağlar)
 PricePerUnit*Quantity=TotalSpent
 
-## İtem sütununa göre NaN olan Price Per Unit değerleri dolduruldu.
+##### İtem sütununa göre NaN olan Price Per Unit değerleri dolduruldu.
 <img width="984" height="165" alt="image" src="https://github.com/user-attachments/assets/c3f14af9-11b8-4023-b27a-36c1047b4861" />
 
 ## İtem sütünundaki NaN değerler için Price Per Unit sütunu kontrol edilir ve Price Per Unit değerlerine göre hangi item değerinin denk geldiği bulunur böylece item sütunundaki nan değerler kaldırılmış olur.Fakat aynı olan Price Per Unit değerleri için bu işlem yapılamaz. Örnek olarak Sandwich ve Smoothie itemi'nin Price Per Unit değeri 6'dır bu yüzden 6 değerini gördüğümüzde kesinlikle Sandwich ya da Smoothie diyemeyiz. 
