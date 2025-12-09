@@ -1,4 +1,4 @@
-# Payment Method Predict
+# Predict Payment Method
 Cafe Sales Prediction Project
 # Proje Özeti
 
