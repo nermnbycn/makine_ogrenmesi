@@ -56,16 +56,18 @@ Aynı şekilde oranlara bakılarak NaN location değerleri dolduruldu.
 - Tahmin işlemi test edildi.
 <img width="988" height="382" alt="image" src="https://github.com/user-attachments/assets/72695f1f-e35e-403c-b6ea-b356b482122f" />
 
-
 # Örnek Kullanım
 predict_payment("Coffee", 20, "Takeaway")
 
 
 Temizlenmiş veriler üzerinden çalışan model, satış özelliklerine göre müşterinin ödeme yöntemini tahmin edebilmektedir.
 
-
 # Bu tahmin işlemi için neden LinearRegression uygun değil?
 Tahmin ettiğimiz Payment Method sütunu kategorik bir veridir linearRegressiona uygulamak için sayı değerine çevirip tahmin yaptırırız. Model bu tahmini yaparken kesirli çıktılar üretebilir bu da anlamsız tahminler doğurur. Bu modelin bu veriye uygun olmadığını RMSE ve R2 Score değerleriyle kanıtlayabiliriz.
 <img width="1168" height="339" alt="image" src="https://github.com/user-attachments/assets/198b783d-4300-42bb-84f8-ca1e560a7801" />
 Burada görüldüğü üzere R2 score değeri negatif bir değer çıkmıştır bu da bize bu modelin uygun olmadığını kanıtlar.
+
+<img width="1169" height="130" alt="image" src="https://github.com/user-attachments/assets/2d5bb06b-f6f9-42c4-a549-18dc33584e2b" />
+Son olarak burada 15 TL'lik fiyat için tahmin yapılmıştır ve tahmin değeri kesirli çıkmıştır. Kesirli değer kategorik verilerde herhangi bir işimize yaramaz yani anlamlı bir tahmin sonucu vermez.
+
 
