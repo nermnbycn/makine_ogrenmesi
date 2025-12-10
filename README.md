@@ -62,3 +62,10 @@ predict_payment("Coffee", 20, "Takeaway")
 
 
 Temizlenmiş veriler üzerinden çalışan model, satış özelliklerine göre müşterinin ödeme yöntemini tahmin edebilmektedir.
+
+
+# Bu tahmin işlemi için neden LinearRegression uygun değil?
+Tahmin ettiğimiz Payment Method sütunu kategorik bir veridir linearRegressiona uygulamak için sayı değerine çevirip tahmin yaptırırız. Model bu tahmini yaparken kesirli çıktılar üretebilir bu da anlamsız tahminler doğurur. Bu modelin bu veriye uygun olmadığını RMSE ve R2 Score değerleriyle kanıtlayabiliriz.
+<img width="1168" height="339" alt="image" src="https://github.com/user-attachments/assets/198b783d-4300-42bb-84f8-ca1e560a7801" />
+Burada görüldüğü üzere R2 score değeri negatif bir değer çıkmıştır bu da bize bu modelin uygun olmadığını kanıtlar.
+
